@@ -1,0 +1,18 @@
+---
+title: "Pair_programming"
+author: "Andy Price"
+date: "11/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(googlesheets4)
+```
+
+```{r}
+sheets_deauth()
+election_data <- read_sheet("13NhlT-Oik5P4NOKRWwrJ7xZQlddFNk81HHEw9wkWglM")
+```
+
