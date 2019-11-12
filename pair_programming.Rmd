@@ -14,5 +14,18 @@ library(googlesheets4)
 ```{r}
 sheets_deauth()
 election_data <- read_sheet("13NhlT-Oik5P4NOKRWwrJ7xZQlddFNk81HHEw9wkWglM")
+
+
+group_by(gender)
+ggplot(election_data, aes(x = dvote)) +
+  geom_bar()
+
+glm(formula = dvote ~ partisanship, data = election_data)
+
+
+election_data %>% 
+mutate(partisanship2 = if_else(partisanship))
+
+ggplot(aes(x = partisanship, y = ))
 ```
 
